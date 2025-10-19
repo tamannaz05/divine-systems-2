@@ -6,7 +6,7 @@ const Footer = () => {
           <div className="footer-section">
             <div className="footer-logo">
               <img
-                src="/logo.png"
+                src="/divine-systems/logo.png"
                 alt="Divine Systems Logo"
                 className="footer-logo-image"
               />

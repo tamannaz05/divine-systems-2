@@ -93,7 +93,7 @@ const Navbar = ({ theme, toggleTheme }) => {
           onClick={(e) => handleLinkClick(e, "#home")}
         >
           <img
-            src="/logo.png"
+            src="/divine-systems/logo.png"
             alt="Divine Systems Logo"
             className="logo-image"
           />
