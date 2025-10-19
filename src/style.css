@@ -156,6 +156,7 @@ html {
   justify-content: center;
   width: 40px;
   height: 40px;
+  z-index: 1001;
 }
 
 .theme-toggle:hover {
@@ -172,6 +173,7 @@ html {
   font-size: 1.5rem;
   color: var(--text-light);
   cursor: pointer;
+  z-index: 1001;
 }
 
 /* Hero Section */
@@ -753,6 +755,23 @@ html {
 
   .mobile-menu-toggle {
     display: block;
+  }
+
+  .nav-container {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .theme-toggle {
+    order: 2;
+    width: 40px;
+    height: 40px;
+  }
+
+  .mobile-menu-toggle {
+    order: 3;
   }
 
   .hero h1 {
