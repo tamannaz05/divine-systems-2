@@ -5,6 +5,7 @@ import About from './components/About'
 import Services from './components/Services'
 import Team from './components/Team'
 import Value from './components/Value'
+import Contact from './components/Contact'
 import Footer from './components/Footer'
 import ScrollToTop from './components/ScrollToTop'
 import useTheme from './hooks/useTheme'
@@ -26,6 +27,7 @@ function App() {
       <Services />
       <Team />
       <Value />
+      <Contact />
       <Footer />
       <ScrollToTop />
     </div>
