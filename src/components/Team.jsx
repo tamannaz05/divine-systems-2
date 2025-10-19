@@ -4,25 +4,31 @@ const Team = () => {
       avatar: 'BI',
       title: 'BI Specialists',
       description:
-        'Expert consultants specializing in Oracle OBIEE, Tableau, and Power BI implementations with deep industry knowledge.',
+        'Expert consultants specializing in Oracle OBIEE/OAS, Tableau, and Power BI implementations with deep industry knowledge.',
     },
     {
       avatar: 'DE',
       title: 'Data Engineers',
       description:
-        'Skilled engineers experienced in cloud migrations, data warehousing, and modern ETL solutions using cutting-edge technologies.',
+        'Skilled engineers experienced in data warehousing and modern ETL solutions using cutting-edge technologies.',
     },
     {
       avatar: 'CA',
       title: 'Cloud Architects',
       description:
-        'Certified professionals specializing in Snowflake, Matillion, and cloud-native data solutions for enterprise clients.',
+        'Certified professionals specializing in cloud migrations and cloud-native data solutions for enterprise clients.',
     },
     {
       avatar: 'DS',
       title: 'Data Scientists',
       description:
         'Advanced analytics experts who help unlock insights from both structured and unstructured data sources.',
+    },
+    {
+      avatar: 'SE',
+      title: 'Full Stack Developers',
+      description:
+        'Software developers proficient in developing both the frontend and backend of applications.',
     },
   ]
 
