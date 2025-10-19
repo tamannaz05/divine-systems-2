@@ -421,13 +421,17 @@ html {
 
 /* Team Section */
 .team-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 2rem;
   margin-top: 3rem;
 }
 
 .team-card {
+  flex: 0 1 calc(25% - 1.5rem);
+  min-width: 250px;
+  max-width: 300px;
   background: var(--card-bg);
   padding: 2rem;
   border-radius: 15px;
@@ -478,13 +482,17 @@ html {
 
 /* Value Props */
 .value-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 2rem;
   margin-top: 3rem;
 }
 
 .value-card {
+  flex: 0 1 calc(25% - 1.5rem);
+  min-width: 250px;
+  max-width: 300px;
   text-align: center;
   padding: 2rem;
   background: var(--card-bg);
@@ -650,6 +658,16 @@ html {
 }
 
 /* Responsive Design */
+/* Tablet and large screens: 2 cards per row */
+@media (max-width: 1024px) {
+  .team-card,
+  .value-card {
+    flex: 0 1 calc(50% - 1rem);
+    min-width: 250px;
+    max-width: 400px;
+  }
+}
+
 @media (max-width: 768px) {
   .section {
     min-height: 100vh;
@@ -726,10 +744,14 @@ html {
     font-size: 2.2rem;
   }
 
-  .services-grid,
-  .team-grid,
-  .value-grid {
+  .services-grid {
     grid-template-columns: 1fr;
+  }
+
+  .team-card,
+  .value-card {
+    flex: 0 1 100%;
+    max-width: 500px;
   }
 
   .nav-container {
