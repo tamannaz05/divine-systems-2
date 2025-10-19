@@ -107,7 +107,7 @@ const Contact = () => {
               </div>
               <div>
                 <h3>Call Us</h3>
-                <p>+1 (555) 123-4567</p>
+                <p>+1 (630) 885-1802</p>
                 <p>Mon-Fri: 9AM - 6PM EST</p>
               </div>
             </div>
