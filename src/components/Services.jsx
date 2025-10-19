@@ -2,33 +2,33 @@ const Services = () => {
   const services = [
     {
       icon: 'fa-cloud-upload-alt',
-      title: 'On-premise to Cloud Data Migrations',
+      title: 'On-premises to Cloud Data Migrations',
       description:
-        'Seamlessly migrate your data infrastructure from on-premise systems to modern cloud platforms with zero data loss and minimal downtime.',
+        'Seamlessly migrate your data infrastructure from on-premises systems to modern cloud platforms with zero data loss and minimal downtime.',
     },
     {
       icon: 'fa-chart-bar',
-      title: 'OBIEE and BI Apps Implementation',
+      title: 'BI Development',
       description:
-        'Complete Oracle Business Intelligence Enterprise Edition implementation and customization services tailored to your business requirements.',
+        'End-to-end OBIEE/OAS, Tableau, and Power BI custom reports, interactive dashboards, and advanced data visualization solutions.',
     },
     {
-      icon: 'fa-snowflake',
-      title: 'Matillion + Snowflake Data Integration',
+      icon: 'fa-cogs',
+      title: 'Data Engineering',
       description:
-        "Advanced data integration solutions combining Matillion's powerful ETL capabilities with Snowflake's cloud data platform for optimal performance.",
+        'Develop robust data ingestion, ETL/ELT, and transformation pipelines for on-prem, cloud-native, and hybrid environments',
     },
     {
-      icon: 'fa-chart-line',
-      title: 'Tableau Implementation & Development',
+      icon: 'fa-code',
+      title: 'Full-stack Development',
       description:
-        'End-to-end Tableau implementation services including custom reports, interactive dashboards, and advanced data visualization solutions.',
+        'Custom Software Development in both the front-end (user interface) and back-end (server-side logic, databases) of a web application.',
     },
     {
-      icon: 'fa-chart-pie',
-      title: 'Power BI Implementation & Development',
+      icon: 'fa-brain',
+      title: 'AI/ML',
       description:
-        'Comprehensive Microsoft Power BI solutions from implementation to custom dashboard development and advanced analytics integration.',
+        'Implementation of Amazon SageMaker ML models and GenAI chatbot development using foundation models.',
     },
     {
       icon: 'fa-database',
