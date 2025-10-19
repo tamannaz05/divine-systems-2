@@ -1,0 +1,72 @@
+const Services = () => {
+  const services = [
+    {
+      icon: 'fa-cloud-upload-alt',
+      title: 'On-premise to Cloud Data Migrations',
+      description:
+        'Seamlessly migrate your data infrastructure from on-premise systems to modern cloud platforms with zero data loss and minimal downtime.',
+    },
+    {
+      icon: 'fa-chart-bar',
+      title: 'OBIEE and BI Apps Implementation',
+      description:
+        'Complete Oracle Business Intelligence Enterprise Edition implementation and customization services tailored to your business requirements.',
+    },
+    {
+      icon: 'fa-snowflake',
+      title: 'Matillion + Snowflake Data Integration',
+      description:
+        "Advanced data integration solutions combining Matillion's powerful ETL capabilities with Snowflake's cloud data platform for optimal performance.",
+    },
+    {
+      icon: 'fa-chart-line',
+      title: 'Tableau Implementation & Development',
+      description:
+        'End-to-end Tableau implementation services including custom reports, interactive dashboards, and advanced data visualization solutions.',
+    },
+    {
+      icon: 'fa-chart-pie',
+      title: 'Power BI Implementation & Development',
+      description:
+        'Comprehensive Microsoft Power BI solutions from implementation to custom dashboard development and advanced analytics integration.',
+    },
+    {
+      icon: 'fa-database',
+      title: 'Data Warehousing Solutions',
+      description:
+        'Design and implement robust data warehousing solutions that serve as the foundation for your enterprise analytics and reporting needs.',
+    },
+  ]
+
+  return (
+    <section
+      className="section"
+      id="services"
+      style={{
+        backgroundColor: 'var(--card-bg)',
+        borderTop: '3px solid var(--secondary)',
+      }}
+    >
+      <div className="container">
+        <h2 className="section-title">What We Do</h2>
+        <p className="section-subtitle">
+          Our specialized services based on proven expertise and
+          industry-leading technologies
+        </p>
+        <div className="services-grid">
+          {services.map((service, index) => (
+            <div key={index} className="service-card click-animation">
+              <div className="service-icon">
+                <i className={`fas ${service.icon}`}></i>
+              </div>
+              <h3>{service.title}</h3>
+              <p>{service.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+export default Services
