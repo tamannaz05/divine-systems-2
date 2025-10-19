@@ -20,9 +20,9 @@ const Hero = () => {
     e.preventDefault()
     const target = document.querySelector('#services')
     if (target) {
-      const headerOffset = 120
+      // Scroll to exact section top for full-screen sections
       const elementPosition = target.getBoundingClientRect().top
-      const offsetPosition = elementPosition + window.pageYOffset - headerOffset
+      const offsetPosition = elementPosition + window.pageYOffset
 
       window.scrollTo({
         top: offsetPosition,

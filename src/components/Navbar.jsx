@@ -10,19 +10,36 @@ const Navbar = ({ theme, toggleTheme }) => {
       setIsScrolled(window.scrollY > 100)
 
       // Update active link based on scroll position
+      // For full-screen sections, detect which section is most visible
       const sections = document.querySelectorAll('section[id]')
       let current = ''
+      let maxVisibility = 0
+
       sections.forEach((section) => {
-        const sectionTop = section.getBoundingClientRect().top
-        const sectionHeight = section.clientHeight
-        if (sectionTop <= 100 && sectionTop + sectionHeight > 100) {
+        const rect = section.getBoundingClientRect()
+        const sectionTop = rect.top
+        const sectionBottom = rect.bottom
+        const viewportHeight = window.innerHeight
+
+        // Calculate how much of the section is visible in viewport
+        const visibleTop = Math.max(0, sectionTop)
+        const visibleBottom = Math.min(viewportHeight, sectionBottom)
+        const visibleHeight = Math.max(0, visibleBottom - visibleTop)
+
+        // If this section is more visible than previous ones, mark it as current
+        if (visibleHeight > maxVisibility) {
+          maxVisibility = visibleHeight
           current = section.getAttribute('id')
         }
       })
+
       if (current) {
         setActiveLink(current)
       }
     }
+
+    // Initial call to set active link on mount
+    handleScroll()
 
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
@@ -30,11 +47,22 @@ const Navbar = ({ theme, toggleTheme }) => {
 
   const handleLinkClick = (e, href) => {
     e.preventDefault()
+
+    // Special case: Home section should scroll to absolute top (0)
+    if (href === '#home') {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+      })
+      setIsMobileMenuOpen(false)
+      return
+    }
+
     const target = document.querySelector(href)
     if (target) {
-      const headerOffset = 120
+      // For other sections, scroll to exact section top
       const elementPosition = target.getBoundingClientRect().top
-      const offsetPosition = elementPosition + window.pageYOffset - headerOffset
+      const offsetPosition = elementPosition + window.pageYOffset
 
       window.scrollTo({
         top: offsetPosition,
